@@ -5,6 +5,7 @@ import LinkCard from './components/LinkCard';
 import tipme from './assets/logos/tipme.png';
 import youtubeLogo from './assets/logos/youtube.png';
 import githubLogo from './assets/logos/GitHub.png';
+import discord from './assets/logos/discord.png';
 import igLogo from './assets/logos/ig.png';
 import tiktokLogo from './assets/logos/tiktok.png';
 import spotifyLogo from './assets/logos/spotify.png';
@@ -23,6 +24,7 @@ const App = () => {
   const links = [
     { id: 1, title: 'easydonate', url: 'https://ezdn.app/in83ane', logo: ezdontatelogo },
     { id: 8, title: 'tipme', url: 'https://tipme.in.th/eda9a3279926adf604ce2b25', logo: tipme },
+    { id: 9, title: 'discord', url: 'https://discord.gg/NQX2J4sZrm', logo: discord }, // Example link for audio
     { id: 2, title: 'youtube', url: 'https://www.youtube.com/@in83ane', logo: youtubeLogo },
     { id: 3, title: 'github', url: 'https://github.com/in83ane', logo: githubLogo },
     { id: 4, title: 'instagram', url: 'https://www.instagram.com/in83ane/', logo: igLogo },
