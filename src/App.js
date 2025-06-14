@@ -11,6 +11,7 @@ import spotifyLogo from './assets/logos/spotify.png';
 import twitchLogo from './assets/logos/twitch.png';
 import muteLogo from './assets/logos/mute.png';
 import speakerLogo from './assets/logos/speaker.png';
+//import tipmeLogo from './assets/logos/tipme.png'; // เพิ่ม import สำหรับ tipme
 
 // Import audio
 import thisTimeAudio from './assets/audio/ThisTime.mp3';
@@ -23,6 +24,7 @@ const App = () => {
   const links = [
     { id: 1, title: 'browser', url: 'https://ezdn.app/in83ane', logo: browserLogo },
     { id: 2, title: 'youtube', url: 'https://www.youtube.com/@in83ane', logo: youtubeLogo },
+    { id: 8, title: 'tipme', url: 'https://tipme.in.th/eda9a3279926adf604ce2b25', logo: browserLogo },
     { id: 3, title: 'github', url: 'https://github.com/in83ane', logo: githubLogo },
     { id: 4, title: 'instagram', url: 'https://www.instagram.com/in83ane/', logo: igLogo },
     { id: 5, title: 'tiktok', url: 'https://www.tiktok.com/@in83ane', logo: tiktokLogo },
@@ -53,6 +55,15 @@ const App = () => {
     if (audioRef.current) audioRef.current.volume = volume;
   }, []);
 
+  const getLayoutClass = () => {
+    const totalLinks = links.length;
+    // หน้าจอเล็ก: 2 คอลัมน์, หน้าจอกลาง: 3 คอลัมน์, หน้าจอใหญ่: 4 คอลัมน์
+    if (totalLinks <= 2) return 'grid-cols-1 sm:grid-cols-2';
+    if (totalLinks <= 3) return 'grid-cols-2 sm:grid-cols-1 lg:grid-cols-2';
+    if (totalLinks <= 6) return 'grid-cols-2 sm:grid-cols-2 lg:grid-cols-3';
+    return 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4';
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 flex flex-col items-center justify-center p-4 relative">
       <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center text-gray-800 tracking-wider">IN83ANE</h1>
@@ -80,7 +91,7 @@ const App = () => {
         />
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-6 max-w-4xl">
+      <div className={`grid gap-4 mt-8 max-w-4xl w-full px-4 ${getLayoutClass()}`}>
         {links.map((link) => (
           <LinkCard key={link.id} {...link} />
         ))}
