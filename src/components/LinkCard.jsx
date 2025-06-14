@@ -4,7 +4,7 @@ const LinkCard = ({ title, url, logo }) => {
   // กำหนดสีตาม platform
   const getCardStyle = (title) => {
     const styles = {
-      browser: 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
+      easydonate: 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
       tipme: 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',
       youtube: 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',
       github: 'bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900',

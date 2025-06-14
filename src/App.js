@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import LinkCard from './components/LinkCard';
 
-// Import logos
-import browserLogo from './assets/logos/browser.png';
+
+import tipme from './assets/logos/tipme.png';
 import youtubeLogo from './assets/logos/youtube.png';
 import githubLogo from './assets/logos/GitHub.png';
 import igLogo from './assets/logos/ig.png';
@@ -11,9 +11,8 @@ import spotifyLogo from './assets/logos/spotify.png';
 import twitchLogo from './assets/logos/twitch.png';
 import muteLogo from './assets/logos/mute.png';
 import speakerLogo from './assets/logos/speaker.png';
-//import tipmeLogo from './assets/logos/tipme.png'; // เพิ่ม import สำหรับ tipme
+import ezdontatelogo from './assets/logos/ezdonatelogo.png'; 
 
-// Import audio
 import thisTimeAudio from './assets/audio/ThisTime.mp3';
 
 const App = () => {
@@ -22,9 +21,9 @@ const App = () => {
   const audioRef = useRef(null);
 
   const links = [
-    { id: 1, title: 'browser', url: 'https://ezdn.app/in83ane', logo: browserLogo },
+    { id: 1, title: 'easydonate', url: 'https://ezdn.app/in83ane', logo: ezdontatelogo },
+    { id: 8, title: 'tipme', url: 'https://tipme.in.th/eda9a3279926adf604ce2b25', logo: tipme },
     { id: 2, title: 'youtube', url: 'https://www.youtube.com/@in83ane', logo: youtubeLogo },
-    { id: 8, title: 'tipme', url: 'https://tipme.in.th/eda9a3279926adf604ce2b25', logo: browserLogo },
     { id: 3, title: 'github', url: 'https://github.com/in83ane', logo: githubLogo },
     { id: 4, title: 'instagram', url: 'https://www.instagram.com/in83ane/', logo: igLogo },
     { id: 5, title: 'tiktok', url: 'https://www.tiktok.com/@in83ane', logo: tiktokLogo },
