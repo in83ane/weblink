@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import LinkCard from './components/LinkCard';
-
-
-import tipme from './assets/logos/tipme.png';
 import youtubeLogo from './assets/logos/youtube.png';
 import githubLogo from './assets/logos/GitHub.png';
 import discord from './assets/logos/discord.png';
@@ -53,7 +50,7 @@ const App = () => {
 
   useEffect(() => {
     if (audioRef.current) audioRef.current.volume = volume;
-  }, []);
+  }, [volume]);
 
   const getLayoutClass = () => {
     const totalLinks = links.length;
